@@ -1,0 +1,57 @@
+#include <stdio.h>
+// Функція для виведення двійкового представлення числа (32 біти)
+void printBinary(int n) {
+for (int i = 31; i >= 0; i--) {
+int k = n >> i;
+if (k & 1)
+printf("1");
+else
+printf("0");
+if (i % 4 == 0) printf(" ");
+}
+printf("\n");
+}
+int main() {
+int a = 5;
+int b = 3;
+printf("Арифметичні оператори:\n");
+printf("5 + 3 = %d\n", 5 + 3);
+printf("5 - 3 = %d\n", 5 - 3);
+printf("5 * 3 = %d\n", 5 * 3);
+printf("5 / 3 = %d\n", 5 / 3);
+printf("5 %% 3 = %d\n\n", 5 % 3);
+printf("Логічні оператори:\n");
+printf("(5 > 3) && (5 < 10) = %d\n", (5 > 3) && (5 < 10));
+printf("(5 > 3) || (3 < 10) = %d\n", (5 > 3) || (3 < 10));
+printf("!5 = %d\n\n", !5);
+printf("Побітові оператори:\n");
+printf("Число а в двійковому форматі: ");
+printBinary(a);
+printf("Число b в двійковому форматі: ");
+printBinary(b);
+printf("\n");
+printf("5 & 3 = %d\n", 5 & 3);
+printf("Результат у двійковому форматі: ");
+printBinary(5 & 3);
+printf("\n");
+printf("5 | 3 = %d\n", 5 | 3);
+printf("Результат у двійковому форматі: ");
+printBinary(5 | 3);
+printf("\n");
+printf("5 ^ 3 = %d\n", 5 ^ 3);
+printf("Результат у двійковому форматі: ");
+printBinary(5 ^ 3);
+printf("\n");
+printf("~5 = %d\n", ~5);
+printf("Результат у двійковому форматі: ");
+printBinary(~5);
+printf("\n");
+printf("5 << 1 = %d\n", 5 << 1);
+printf("Результат у двійковому форматі: ");
+printBinary(5 << 1);
+printf("\n");
+printf("5 >> 1 = %d\n", 5 >> 1);
+printf("Результат у двійковому форматі: ");
+printBinary(5 >> 1);
+return 0;
+}
